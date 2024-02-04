@@ -13,12 +13,13 @@ class BusinessCardApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color(0xff2B475E),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               backgroundColor: Colors.white,
-              radius: 125,
+              radius: 115,
               child: CircleAvatar(
-                radius: 122,
+                radius: 112,
                 backgroundImage: AssetImage('image/profile.jpg'),
               ),
             ),
@@ -37,7 +38,70 @@ class BusinessCardApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 19,
               ),
-            )
+            ),
+            Divider(
+              color: Color(0xff6C8090),
+              indent: 60,
+              endIndent: 60,
+              thickness: 1,
+              height: 10,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white),
+                height: 65,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Icon(
+                        Icons.phone,
+                        color: Color(0xff2B475E),
+                        size: 35,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 22),
+                      child: Text(
+                        '(+20)1264689309 ',
+                        style: TextStyle(fontSize: 25),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white),
+                height: 65,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Icon(
+                        Icons.email,
+                        color: Color(0xff2B475E),
+                        size: 35,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 22),
+                      child: Text(
+                        'marainadly@gmail.com ',
+                        style: TextStyle(fontSize: 25),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
