@@ -22,6 +22,22 @@ class BusinessCardApp extends StatelessWidget {
                 backgroundImage: AssetImage('image/profile.jpg'),
               ),
             ),
+            Text(
+              'Marian Adly',
+              style: TextStyle(
+                fontSize: 33,
+                color: Colors.white,
+                fontFamily: 'Pacifico',
+              ),
+            ),
+            Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
+                color: Color(0xff6C8090),
+                fontWeight: FontWeight.bold,
+                fontSize: 19,
+              ),
+            )
           ],
         ),
       ),
