@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BusinessCardApp());
+  runApp(const BusinessCardApp());
 }
 
 class BusinessCardApp extends StatelessWidget {
@@ -9,7 +9,7 @@ class BusinessCardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         backgroundColor: Color(0xff2B475E),
         body: Column(
@@ -46,59 +46,31 @@ class BusinessCardApp extends StatelessWidget {
               thickness: 1,
               height: 10,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white),
-                height: 65,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 16),
-                      child: Icon(
-                        Icons.phone,
-                        color: Color(0xff2B475E),
-                        size: 35,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 22),
-                      child: Text(
-                        '(+20)1264689309 ',
-                        style: TextStyle(fontSize: 25),
-                      ),
-                    ),
-                  ],
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Color(0xff2B475E),
+                  size: 35,
+                ),
+                title: Text(
+                  '(+20)1264689309 ',
+                  style: TextStyle(fontSize: 25),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white),
-                height: 65,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 16),
-                      child: Icon(
-                        Icons.email,
-                        color: Color(0xff2B475E),
-                        size: 35,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 22),
-                      child: Text(
-                        'marainadly@gmail.com ',
-                        style: TextStyle(fontSize: 25),
-                      ),
-                    ),
-                  ],
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Color(0xff2B475E),
+                  size: 35,
+                ),
+                title: Text(
+                  'maraina@gmail.com ',
+                  style: TextStyle(fontSize: 25),
                 ),
               ),
             ),
